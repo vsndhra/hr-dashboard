@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- stylesheet links -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- boxicons cdnn link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>HR Dashboard</title>
+</head>
+<body>
+    <div >
+        <div class="sidemenu">
+            <header class="d-flex justify-contents-center align-items-center">
+                <div class="logo">
+                    <img src="images/logo.png" class="image-fluid" alt="Logo">
+                </div>
+                <div class="logo-text text-light">
+                   <h1> tiimi </h1>
+                </div>
+            </header>
+            <ul class="menu">
+                <li><a href="#" class="menu-item"><i class='bx bxs-dashboard'></i><span class="menu-name">Dashboard</span></a></li>
+                <li><a href="#" class="menu-item"><i class='bx bxs-inbox'></i><span class="menu-name">Inbox</span></a></li>
+                <li><a href="#" class="menu-item"><i class='bx bx-calendar-plus'></i><span class="menu-name">Calendar & Todos</span></a></li>
+                <li class="menu-title"><span class="text-lighter">RECRUITMENT</span></li>
+                <li><a href="#" class="menu-item"><i class='bx bxs-briefcase'></i><span class="menu-name">Jobs</span></a></li>
+                <li><a href="#" class="menu-item"><i class='bx bxs-group'></i><span class="menu-name">Candidates</span></a></li>
+                <li><a href="#" class="menu-item"><i class='bx bx-network-chart'></i><span class="menu-name">My Referrals</span></a></li>
+                <li><a href="#" class="menu-item"><i class='bx bxs-id-card'></i><span class="menu-name">Career Site</span></a></li>
+                <li class="menu-title"><span class="text-lighter">ORGANIZATION</span></li>
+                <li><a href="#" class="menu-item"><i class='bx bxs-user'></i><span class="menu-name">Employee</span></a></li>
+                <li><a href="#" class="menu-item"><i class='bx bx-sitemap'></i><span class="menu-name">Structure</span></a></li>
+                <li><a href="#" class="menu-item"><i class='bx bxs-pie-chart-alt-2'></i><span class="menu-name">Report</span></a></li>
+                <li><a href="#" class="menu-item"><i class='bx bxs-cog'></i><span class="menu-name">Setting</span></a></li>
+                <li class="menu-title"><span class="text-light">Need Help?</span><br></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="row d-flex justify-contents-center align-items-center navbar border-bottom">
+                <div class="col-2 toggle-menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+                <div class="col-3 organization">
+                    <div>
+                    <p class="org-title"><small>Your Oraganization</small></p>
+                    <p class="org-name fw-bold">Fikri Studio</p></div>
+                    <i class='bx bx-expand-vertical'></i>
+                </div>
+                <div class="col-4 align-items-right">
+                    <i class='bx bx-search'></i>
+                </div>
+                <div class="col-3 d-flex flex-row-reverse align-items-center justify-contents-center px-3 icon-container">
+                    <div class="profile rounded-circle mx-2"><i class="bx bx-user"></i></div>
+                    <div class="notification rounded-circle mx-2"><i class="bx bx-bell"></i></div>
+                    <div class="add rounded-circle mx-2"><i class="bx bx-plus"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let menuTitle = document.querySelectorAll('.menu-title');
+    let logoText = document.querySelector('.logo-text');
+    let menuName = document.querySelectorAll('.menu-name');
+    let sidemenu = document.querySelector(".sidemenu");
+    let toggleBtn = document.querySelector(".bx-menu");
+    console.log(toggleBtn);
+    toggleBtn.addEventListener("click", ()=>{
+        for (let title of menuTitle) {
+            title.classList.toggle('hidden');
+        }
+        for (let name of menuName) {
+            name.classList.toggle('hidden');
+        }
+        logoText.classList.toggle('hidden');
+        sidemenu.classList.toggle("close");
+    });
+</script>
+</html>

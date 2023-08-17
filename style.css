@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+:root{
+    --sidebar-color: #1C212D;
+    --sidebar-active-color: #FFD831;
+    --sidebar-color-lighter: #7E8CA5;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sidemenu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 225px;
+    background-color: var(--sidebar-color);
+}
+.sidemenu .logo img{
+    min-width: 10px;
+    max-width: 45px;
+    margin-top: 5px;
+    margin-left: 12px;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+.sidemenu .logo-text h1{
+    margin-top: 10px;
+    font-weight:800
+}
+.menu{
+    margin-top: 15px;
+    list-style: none;
+    padding: 0;
+}
+.sidemenu .menu-item {
+    display: block;
+    padding: 8px 20px;
+    text-decoration: none;
+    transition: background-color var(--tran-03), color var(--tran-03);
+}
+.menu-item i {
+    font-size: 15px;
+    margin: 0 7px;
+    color: #7E8CA5;
+}
+.menu-item span {
+    margin-left: 10px;
+    font-size: medium;
+    font-weight:500;
+    color: white;
+}
+.menu-title {
+    margin-top: 3px;
+    padding: 8px 20px;
+    font-weight: bold;
+    color: var(--sidebar-color-lighter); /* Set the color for the lighter text */
+}
+.menu-item:hover {
+    background-color: var(--sidebar-active-color);
+    color: var(--sidebar-color);
+}
+.menu-item:hover span,
+.menu-item:hover i {
+    color: var(--sidebar-color); /* Change this color to the desired color on hover */
+}
+.main{
+    position: relative;
+    background-color: white;
+    left: 225px;
+    width: calc(100% - 225px);
+    height: 100vh;
+    transition: all 0.5s ease;
+}
+.sidemenu.close ~ .main{
+    left: 65px;
+    width: calc(100% - 78px);
+}
+.main{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.navbar{
+    position: relative;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 60px;
+}
+.toggle-menu{
+    margin: 0;
+    padding: 0;
+    width: 60px;
+    list-style: none;
+}
+.main .navbar .bx-menu{
+    color: #7E8CA5;
+    font-size: 35px;
+    margin: 0 15px;
+}
+.hidden {
+    display: none;
+}
+.organization {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.organization p{
+    margin: 0;
+    padding: 0;
+}
+.organization .org-title{
+    color:  gray;
+}
+
+.icon-container i {
+    margin: 0 8px;
+}
+.add,
+.profile,
+.notification {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0;
+}
+.add {
+    background-color: #FFD831;
+}
+.add i{
+    font-size: 20px;
+}
+.profile,
+.notification {
+    background-color: lightgray;
+}
