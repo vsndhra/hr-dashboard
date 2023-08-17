@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- boxicons cdnn link -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 
     <title>HR Dashboard</title>
 </head>
@@ -42,7 +43,7 @@
             </ul>
         </div>
         <div class="main">
-            <div class="row d-flex justify-contents-center align-items-center navbar border-bottom">
+            <div class="row d-flex justify-content-center align-items-center navbar border-bottom">
                 <div class="col-2 toggle-menu">
                     <i class='bx bx-menu'></i>
                 </div>
@@ -59,6 +60,174 @@
                     <div class="profile rounded-circle mx-2"><i class="bx bx-user"></i></div>
                     <div class="notification rounded-circle mx-2"><i class="bx bx-bell"></i></div>
                     <div class="add rounded-circle mx-2"><i class="bx bx-plus"></i></div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="row d-flex flex-row justify-content-center align-items-center tool-content">
+                    <div class="d-flex flex-row">
+                        <div>
+                            <div class="count mx-2">
+                                <h5>32 Candidates</h5>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="filter-button mx-2 border">
+                                <i class='bx bx-filter-alt mx-2'></i> <span>Filter</span>
+                            </div>
+                        </div>
+                        <div class="col d-flex flex-row-reverse mx-2">
+                            <div>
+                                <input type="checkbox" id="toggle-btn">
+                            </div>                                                      
+                            <div class="tools download">
+                                <i class='bx bxs-download'></i>
+                            </div>
+                            <div class="tools print">
+                                <i class='bx bx-printer'></i>
+                            </div>
+                            <div class="vertical-line"></div>
+                            <div class="dropdown">
+                                <div class="drop-down drop-down-button tools" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class='bx bx-dots-vertical-rounded' id="dropdown-icon"></i>
+                                </div>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#"><i class='bx bx-edit-alt mx-2'></i>Edit</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class='bx bx-envelope mx-2'></i>Invitation Email</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class='bx bx-trash mx-2'></i>Delete</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="selected pt-1 tools">
+                                    <p><strong>3</strong><small class="mx-2 light-text">Selected</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="candidate-table mt-4">
+                    <table class="table table-borderless">
+                        <thead>
+                          <tr class="head-row">
+                            <th scope="col"><input type="checkbox" class="mx-2"></th>
+                            <th scope="col" class="employee-name">Employee Name <i class='bx bx-expand-vertical mx-1'></i></th>
+                            <th scope="col">Rating <i class='bx bx-expand-vertical mx-1'></i></th>
+                            <th scope="col">Stage <i class='bx bx-expand-vertical mx-1'></i></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="body-row">
+                              <th scope="row"><input type="checkbox" class="mx-2"></th>
+                                <td><img src="images/female.jpeg" class="pfp rounded-circle mx-2">Darlene Robertson</td>
+                                <td><div class="rating"><i class='bx bx-star mx-2'></i><small>0.0</small></div></td>
+                                <td><div class="stage">
+                                        <div class="stage-name d-flex">
+                                            <p>Screening</p>
+                                            <i class='bx bx-chevron-down'></i>
+                                        </div>
+                                        <div class="stage-box d-flex flex-row screening">
+                                            <div class="one"></div><div class="two"></div><div class="three"></div><div class="four"></div><div class="five"></div><div class="six"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="body-row">
+                                <th scope="row"><input type="checkbox" class="mx-2"></th>
+                                <td><img src="images/male.jpeg" class="pfp rounded-circle mx-2">Cody Fisher</td>
+                                <td><div class="rating"><i class='bx bxs-star mx-2'></i><small>4.5</small></div></td>
+                                <td>
+                                    <div class="stage">
+                                        <div class="stage-name d-flex">
+                                            <p>Screening</p>
+                                            <i class='bx bx-chevron-down'></i>
+                                        </div>
+                                        <div class="stage-box d-flex flex-row interview">
+                                            <div class="one"></div><div class="two"></div><div class="three"></div><div class="four"></div><div class="five"></div><div class="six"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="body-row">
+                                <th scope="row"><input type="checkbox" class="mx-2"></th>
+                                <td><img src="images/female.jpeg" class="pfp rounded-circle mx-2">Jenny Wilson</td>
+                                <td><div class="rating"><i class='bx bx-star mx-2'></i><small>0.0</small></div></td>
+                                <td>
+                                    <div class="stage">
+                                        <div class="stage-name d-flex">
+                                            <p>Screening</p>
+                                            <i class='bx bx-chevron-down'></i>
+                                        </div>
+                                        <div class="stage-box d-flex flex-row design">
+                                            <div class="one"></div><div class="two"></div><div class="three"></div><div class="four"></div><div class="five"></div><div class="six"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="body-row">
+                                <th scope="row"><input type="checkbox" class="mx-2"></th>
+                                <td><img src="images/male.jpeg" class="pfp rounded-circle mx-2">Ahmad Rafi S</td>
+                                <td><div class="rating"><i class='bx bxs-star mx-2'></i><small>5.0</small></div></td>
+                                <td>
+                                    <div class="stage">
+                                        <div class="stage-name d-flex">
+                                            <p>Screening</p>
+                                            <i class='bx bx-chevron-down'></i>
+                                        </div>
+                                        <div class="stage-box d-flex flex-row new">
+                                            <div class="one"></div><div class="two"></div><div class="three"></div><div class="four"></div><div class="five"></div><div class="six"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="body-row">
+                                <th scope="row"><input type="checkbox" class="mx-2"></th>
+                                <td><img src="images/male.jpeg" class="pfp rounded-circle mx-2">Brooklyn Simmons</td>
+                                <td><div class="rating"><i class='bx bx-star mx-2'></i><small>0.0</small></div></td>
+                                <td>
+                                    <div class="stage">
+                                        <div class="stage-name d-flex">
+                                            <p>Screening</p>
+                                            <i class='bx bx-chevron-down'></i>
+                                        </div>
+                                        <div class="stage-box d-flex flex-row screening">
+                                            <div class="one"></div><div class="two"></div><div class="three"></div><div class="four"></div><div class="five"></div><div class="six"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="body-row">
+                                <th scope="row"><input type="checkbox" class="mx-2"></th>
+                                <td><img src="images/female.jpeg" class="pfp rounded-circle mx-2">Bessie Cooper</td>
+                                <td><div class="rating"><i class='bx bxs-star mx-2'></i><small>4.0</small></div></td>
+                                <td>
+                                    <div class="stage">
+                                        <div class="stage-name d-flex">
+                                            <p>Screening</p>
+                                            <i class='bx bx-chevron-down'></i>
+                                        </div>
+                                        <div class="stage-box d-flex flex-row test">
+                                            <div class="one"></div><div class="two"></div><div class="three"></div><div class="four"></div><div class="five"></div><div class="six"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="body-row">
+                                <th scope="row"><input type="checkbox" class="mx-2"></th>
+                                <td><img src="images/male.jpeg" class="pfp rounded-circle mx-2">Marvin McKinney</td>
+                                <td><div class="rating"><i class='bx bx-star mx-2'></i><small>0.0</small></div></td>
+                                <td>
+                                    <div class="stage">
+                                        <div class="stage-name d-flex">
+                                            <p>Screening</p>
+                                            <i class='bx bx-chevron-down'></i>
+                                        </div>
+                                        <div class="stage-box d-flex flex-row hired">
+                                            <div class="one"></div><div class="two"></div><div class="three"></div><div class="four"></div><div class="five"></div><div class="six"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

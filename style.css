@@ -3,6 +3,12 @@
     --sidebar-color: #1C212D;
     --sidebar-active-color: #FFD831;
     --sidebar-color-lighter: #7E8CA5;
+    --new: #99BE7D;
+    --screening: #2D6360;
+    --design: #FF7E00;
+    --interview: #BF68C6;
+    --test: #49CBC4;
+    --hired: #FFD728;
 }
 *{
     font-family: 'Poppins', sans-serif;
@@ -142,4 +148,180 @@
 .profile,
 .notification {
     background-color: lightgray;
+}
+.main-content{
+    background-color: #F3F6F9;
+    padding: 20px;
+    height: 100vh;
+}
+.filter-button{
+    width: 80px;
+    height: 27px;
+    padding: 2px;
+    color: gray;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+.light-text{
+    color: grey;
+}
+.tools{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.drop-down{
+    font-size: 15px;
+    height: 25px;
+    width: 25px;
+    border-radius: 3px;
+    position: relative;
+    background-color: rgb(211, 210, 210);
+}
+.vertical-line{
+    border-right: 2px solid gainsboro;
+    height: 25px;
+    padding: 10px;
+    margin-right: 22px;
+}
+.print, .download{
+    font-size: 15px;
+    height: 25px;
+    width: 25px;
+    border-radius: 3px;
+    margin-right: 10px;
+    position: relative;
+    background-color: white;
+    color: gray;
+}
+/* toggle between list and grid view */
+#toggle-btn{
+    appearance: none;
+    -webkit-appearance: none ;
+    -moz-appearance: none;
+    width: 50px;
+    height: 25px;
+    background-color: lightgray;
+    border-radius: 3px;
+    position: relative;
+    outline: none;
+    transition: all 0.5s;
+}
+#toggle-btn::before{
+    content: "";
+    background-color: white;
+    height:25px;
+    width: 25px;
+    position: absolute;
+    border-radius: 3px;
+    top:0;
+    left:0;
+    transition: all 0.5s;
+}
+#toggle-btn::after{
+    content: "";
+    position: absolute;
+    transform: translate(0,-50%);   
+    transition: all 0.5s;
+}
+#toggle-btn:checked::before{
+    left:50%;
+}
+#toggle-btn:checked:after{
+    content: "";
+    left: 0;
+}
+tbody:before {
+    content:"@";
+    display:block;
+    line-height:10px;
+    text-indent:-99999px;
+}
+tbody .body-row{
+    border-radius: 3px;
+    border-bottom: 3px solid #F3F6F9;
+    vertical-align: middle;
+}
+.candidate-table table {
+    border-radius: 5px; 
+    overflow: hidden;
+    height: 40px;
+}
+.head-row th {
+    vertical-align: middle;
+}
+.head-row th i {
+    vertical-align: middle;
+}
+.employee-name{
+    width: 350px;
+}
+.pfp{
+    width: 30px;
+    height: 30px;
+}
+.rating{
+    border: 1px solid gainsboro;
+    width: 60px;
+    padding: 2px;
+    border-radius: 50px;
+    font-size: 15px;
+    color: gray;
+}
+tr i{
+    margin-top: 4px;
+    margin-left: 1px;
+}
+.bxs-star{
+    color:#FFD831
+}
+.bx-chevron-down{
+    margin-left: 3px;
+}
+.stage-name p{
+    margin: 0;
+    padding: 0;
+}
+.stage-box div{
+    width: 20px;
+    height: 15px;
+    margin-top: 1px;
+    margin-right: 2px;
+    margin-bottom: 3px;
+    background-color: lightgray;
+}
+.new .one{
+    background-color: var(--new);
+}
+.screening .one,
+.screening .two{
+    background-color: var(--screening);
+}
+.design .one,
+.design .two,
+.design .three{
+    background-color: var(--design);
+}
+.interview .one,
+.interview .two,
+.interview .three,
+.interview .four{
+    background-color: var(--interview);
+}
+.test .one,
+.test .two,
+.test .three,
+.test .four,
+.test .five{
+    background-color: var(--test);
+}
+.hired .one,
+.hired .two,
+.hired .three,
+.hired .four,
+.hired .five,
+.hired .six{
+    background-color: var(--hired);
 }
