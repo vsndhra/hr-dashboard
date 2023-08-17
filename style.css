@@ -253,6 +253,7 @@ tbody .body-row{
     vertical-align: middle;
 }
 .head-row th i {
+    margin: 0;
     vertical-align: middle;
 }
 .employee-name{
