@@ -124,7 +124,9 @@
 .organization .org-title{
     color:  gray;
 }
-
+.icon-container{
+    padding-left: 25px;
+}
 .icon-container i {
     margin: 0 8px;
 }
@@ -213,7 +215,8 @@
     transition: all 0.5s;
 }
 #toggle-btn::before{
-    content: "";
+    /* content: '\f00b';  */
+    content: ''; 
     background-color: white;
     height:25px;
     width: 25px;
@@ -224,7 +227,8 @@
     transition: all 0.5s;
 }
 #toggle-btn::after{
-    content: "";
+    /* content: "\f00a"; */
+    content: ''; 
     position: absolute;
     transform: translate(0,-50%);   
     transition: all 0.5s;
@@ -328,4 +332,24 @@ tr i{
 .hired .five,
 .hired .six{
     background-color: var(--hired);
+}
+.list-count input{
+    width: 30px;
+    height: 20px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    padding-top: 2px;
+}
+.dropup{
+    width: 20px;
+    height: 20px;
+    padding-left: 2px;
+    border-right: 1px solid gray;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-radius: 0px;
+}
+.dropdown-menu li{
+    width: px;
+    padding: 10px;
 }

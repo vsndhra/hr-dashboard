@@ -44,22 +44,24 @@
         </div>
         <div class="main">
             <div class="row d-flex justify-content-center align-items-center navbar border-bottom">
-                <div class="col-2 toggle-menu">
-                    <i class='bx bx-menu'></i>
-                </div>
-                <div class="col-3 organization">
-                    <div>
-                    <p class="org-title"><small>Your Oraganization</small></p>
-                    <p class="org-name fw-bold">Fikri Studio</p></div>
-                    <i class='bx bx-expand-vertical'></i>
-                </div>
-                <div class="col-4 align-items-right">
-                    <i class='bx bx-search'></i>
-                </div>
-                <div class="col-3 d-flex flex-row-reverse align-items-center justify-contents-center px-3 icon-container">
-                    <div class="profile rounded-circle mx-2"><i class="bx bx-user"></i></div>
-                    <div class="notification rounded-circle mx-2"><i class="bx bx-bell"></i></div>
-                    <div class="add rounded-circle mx-2"><i class="bx bx-plus"></i></div>
+                <div class="d-flex flex-row">
+                    <div class="toggle-menu mt-1">
+                        <i class='bx bx-menu'></i>
+                    </div>
+                    <div class="col-3 organization mx-2">
+                        <div>
+                        <p class="org-title"><small>Your Oraganization</small></p>
+                        <p class="org-name fw-bold">Fikri Studio</p></div>
+                        <i class='bx bx-expand-vertical'></i>
+                    </div>
+                    <div class="col-5 mx-3 align-items-right">
+                        <i class='bx bx-search mt-3 mx-3'></i>
+                    </div>
+                    <div class="col-3 d-flex flex-row-reverse align-items-center justify-contents-center px-3 icon-container">
+                        <div class="profile rounded-circle mx-2"><i class="bx bx-user"></i></div>
+                        <div class="notification rounded-circle mx-2"><i class="bx bx-bell"></i></div>
+                        <div class="add rounded-circle mx-2"><i class="bx bx-plus"></i></div>
+                    </div>
                 </div>
             </div>
             <div class="main-content">
@@ -228,6 +230,27 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                <div class="paging mt-5">
+                    <div class="d-flex flex-row">
+                        <div class="view mx-2">
+                            <span>View</span>
+                        </div>
+                        <div  class="list-count d-flex">
+                            <input type="text">
+                            <div class="dropup" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class='bx bxs-chevron-up'></i>
+                            </div>
+                            <ul class="dropdown-menu">
+                                <li>1</li>
+                                <li>15</li>
+                                <li>20</li>
+                            </ul>
+                        </div>
+                        <div class="view mx-2">
+                            <span>Candidates per page</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
