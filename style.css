@@ -154,6 +154,9 @@
     padding: 20px;
     height: 100vh;
 }
+.count h5{
+    font-weight: 600;
+}
 .filter-button{
     width: 80px;
     height: 27px;
